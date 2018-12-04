@@ -84,6 +84,7 @@ try {
  * for a short time.
  */
 if (Configure::read('debug')) {
+    Plugin::load('DebugKit', ['bootstrap' => true]);
     Configure::write('Cache._cake_model_.duration', '+2 minutes');
     Configure::write('Cache._cake_core_.duration', '+2 minutes');
     // disable router cache during development
